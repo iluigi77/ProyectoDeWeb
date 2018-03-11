@@ -17,9 +17,9 @@ alter table compra_reserva add column isCompra char;
 
 alter table compra_reserva add column isReserva char;
 
-alter table compra_reserva add foreign key (numero_pasaje) references pasaje(numero_pasaje) 
+alter table compra_reserva add foreign key (numero_pasaje) references pasaje(numero_pasaje); 
 
-alter table compra_reserva add foreign key (idcliente) references cliente(idcliente) 
+alter table compra_reserva add foreign key (idcliente) references cliente(idcliente); 
 
 drop table compra;
 
