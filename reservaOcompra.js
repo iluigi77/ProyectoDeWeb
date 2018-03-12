@@ -55,7 +55,6 @@ app.post('/reservar.html', function (req, res) {
 		con.end();
     });
 	 
-    
-	res.render('servicios');
+    res.sendFile(path.join(__dirname +'/servicios.html'));
     
 });
