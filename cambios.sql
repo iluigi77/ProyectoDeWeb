@@ -24,3 +24,5 @@ alter table compra_reserva add foreign key (idcliente) references cliente(idclie
 drop table compra;
 
 drop table reserva;
+
+alter table compra_reserva MODIFY column idCompraReserva int not null AUTO_INCREMENT;
