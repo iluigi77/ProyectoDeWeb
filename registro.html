@@ -79,19 +79,19 @@
                            	Registrarse
                         </div>
                         <div class="card-body">
-                            <form>
+                            <form method="post" action="/data">
                                 <div class="row">
 									<div class="col-6 form-group">
-                                        <label for="id">* Número de identidad (cedula, pasaporte, dni)</label>
-                                        <input type="number" class="form-control" id="id" placeholder="ID" onchange="ValidaCedula(this.value)" required>
+                                        <label for="id">*Número de identidad (cedula, pasaporte, dni)</label>
+                                        <input type="number" class="form-control" id="id" name="id" placeholder="ID" onchange="ValidaCedula(this.value)" required>
                                     </div>
                                     <div class="col-6 form-group">
-                                        <label for="nombres">Nombre y Apellido</label>
-                                        <input type="text" class="form-control" id="nombres" placeholder="Nombres">
+                                        <label for="nombres">*Nombre y Apellido</label>
+                                        <input type="text" class="form-control" id="nombres" name="nombres" placeholder="Nombres">
                                     </div>
 									<div class="col-6 form-group">
-                                        <label for="origen">Contraseña</label>
-                                        <input type="text" class="form-control" id="* contraseña" placeholder="Contraseña" required>
+                                        <label for="origen">*Contraseña</label>
+                                        <input type="text" class="form-control" id="contraseña" name="contraseña" placeholder="Contraseña" required>
                                    
                                    </div>
                                     
@@ -103,20 +103,26 @@
                                             <option>Chile</option>
                                         </select>
                                      </div>
+                                    
                                      <div class="col-6 form-group">
-                                        <label for="edad">Edad</label>
-                                        <input type="number" class="form-control" id="edad" placeholder="Edad">
+                                        <label for="edad">*Edad</label>
+                                        <input type="number" class="form-control" id="edad" name="edad" placeholder="Edad">
                                     </div>
+                                    
                                      <div class="col-6 form-group">
                                         <label for="email">Correo electronico</label>
-                                        <input type="text" class="form-control" id="email" placeholder="Email">
+                                        <input type="text" class="form-control" id="email" name="email" placeholder="Email">
                                     </div>
                                     <div class="col-6 form-group">
-                                        <label for="tlf">Numero de teléfono</label>
-                                        <input type="tel" class="form-control" id="tlf" placeholder="Telefono" onchange="ValidaTelefono(this.value)" required>
+                                        <label for="tlf">*Numero de teléfono</label>
+                                        <input type="tel" class="form-control" id="tlf" name="tlf" placeholder="Telefono" onchange="ValidaTelefono(this.value)" required>
                                     </div>
-                                    <a href="user.html" class="btn btn-primary btn-lg btn-block">registrarse</a>
-                                   
+                                    <div class="col-6 form-group">
+                                        <label for="tlf">*Dirección</label>
+                                        <input type="tel" class="form-control" id="dir" name="dir" placeholder="Dirección">
+                                    </div>
+                                    
+                                    <input type="submit" value="Registrarse" class="btn btn-primary btn-lg btn-block" onclick="location.href='user.html';"/>
                                     <p>*Datos obligatorios para verificacion de usuario</p>
                                 </div>
                             </form>
