@@ -79,7 +79,7 @@
                             Compra y Reserva de boletos
                         </div>
                         <div class="card-body">
-                            <form>
+                            <form method="POST" action="servicios.html">
                                 <div class="row">
                                     <div class="col-6 form-group">
                                         <label for="origen">* Origen</label>
@@ -132,10 +132,22 @@
                                         <input type="date" class="form-control" id="fecha" placeholder="fecha" required>
                                     </div>
                                     <div class="col-6 form-group">
-                                        <label for="tlf">Numero de teléfono</label>
-                                      <input type="tel" class="form-control" id="tlf" placeholder="Telefono" onchange="ValidaTelefono(this.value)" required>
+                                        <label for="cedula">Id del Cliente</label>
+                                      <input type="text" class="form-control" id="cedula" placeholder="Cedula" >
                                     </div>
-                                    <button type="button" class="btn btn-primary btn-lg btn-block">Reservar/Comprar</button>
+									<div class="col-6 form-group">
+                                        <label for="NroPasaje">Número del Pasaje</label>
+                                      <input type="text" class="form-control" id="nroPasaje" placeholder="nroPasaje" >
+                                    </div>
+									 <div class="col-6 form-group">
+                                        <label for="Elegir">* Compra o Reserva</label>
+                                        <select id="elegir" class="form-control" required>
+                                            <option>Seleccionar opción</option>
+                                            <option>compra</option>
+                                            <option>reserva</option>
+                                        </select>
+                                     </div>
+									<input type="submit" class="btn btn-primary btn-lg btn-block" value="Reservar/Comprar">
 									<a href="user.html" class="btn btn-danger btn-lg btn-block">Regresar al área de usuario</a>
                                    
                                     <p>*Datos obligatorios</p>
@@ -248,5 +260,8 @@ function ValidaTelefono(tlf)
  </script>
 
 
+
+ 
+ 
   </body>
 </html>
