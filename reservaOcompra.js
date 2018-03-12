@@ -12,9 +12,11 @@ app.get('/reservar',function(req,res){
     //__dirname : It will resolve to your project folder.
   });
 
-const server=app.listen(8000, () => {
+const server=app.listen(8015, () => {
   console.log('Servidor web iniciado');
 });
+  
+  
   
   
 var con = mysql.createConnection({
@@ -24,6 +26,14 @@ var con = mysql.createConnection({
   database: "venturismo"
 });
 
+
+con.connect(function(err){
+   if(err){
+      throw err;
+   }else{
+      console.log('Conexion correcta.');
+   }
+});
 
 /**Funcion para insertar en la reserva**/
 
