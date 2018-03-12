@@ -45,7 +45,7 @@ app.post('/reservar.html', function (req, res) {
 	var fecha = req.body.fecha;
 	var cedula = req.body.cedula;
 	var numeroPasaje = req.body.numeroPasaje;
-	if(req.body.elegir.localeCompare("compra")){
+	if(req.body.elegir=="compra"){
 		var isCompra = 'Y';
 		var isReserva = 'N'
 	}else{
@@ -56,7 +56,7 @@ app.post('/reservar.html', function (req, res) {
     console.log(origen, destino, agencia, numero, fecha, cedula, numeroPasaje, isCompra, isReserva);
 	
 	var sql = "INSERT INTO compra_reserva (origen, destino, agencia, NroTarjeta, fecha, idcliente, numero_pasaje, isCompra, isReserva)"+
-  "VALUES('" +origen+"', '" +destino+"', '" +agencia+"', '" +numero+"', '" +fecha+"', '" +idcliente+"' '" +numero_pasaje+"', '" +isCompra+"','" +isReserva+"')";
+  "VALUES('" +origen+"', '" +destino+"', '" +agencia+"', '" +numero+"', '" +fecha+"', '" +cedula+"' '" +numeroPasaje+"', '" +isCompra+"','" +isReserva+"')";
     
 	
 	con.query(sql, function (err, result) {
